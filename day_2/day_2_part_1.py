@@ -9,5 +9,5 @@ with open("day_2_input.txt", 'r') as f:
     count = 0
     for line in f:
         match = re.match("(\d+)-(\d+) (.): (.+)", line)
-        count += 1 if generate_predicate(match)(match.group(4)) else 0
+        count += generate_predicate(match)(match.group(4))
 print(count)

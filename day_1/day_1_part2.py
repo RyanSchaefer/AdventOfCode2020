@@ -10,6 +10,6 @@ def two_sum(target, iterable):
 with open("day_1_input.txt", 'r') as f:
     s1 = {int(line) for line in f}
     for line in map(lambda x: TARGET - x, s1):
-        ans = two_sum((line), s1)
+        ans = two_sum(line, s1)
         if ans:
             print(ans, (TARGET - line))
