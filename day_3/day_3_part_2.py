@@ -1,7 +1,9 @@
 import math
 
+
 def check(line, right, to_move_down):
     return not to_move_down and line[right % (len(line) - 1)] == "#"
+
 
 with open("day_3_input.txt", 'r') as f:
     f.__next__()

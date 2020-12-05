@@ -2,7 +2,7 @@ import re
 
 
 def generate_predicate(s: re.Match):
-    return lambda x: x.count(s.group(3)) >= int(s.group(1)) and x.count(s.group(3)) <= int(s.group(2))
+    return lambda x: int(s.group(1)) <= x.count(s.group(3)) <= int(s.group(2))
 
 
 with open("day_2_input.txt", 'r') as f:

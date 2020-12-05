@@ -3,7 +3,7 @@ import re
 with open("day_2_input.txt", 'r') as f:
     count = 0
     for line in f:
-        match = re.match("(\d+)-(\d+) (.): (.+)", line)
+        match = re.match(r"(\d+)-(\d+) (.): (.+)", line)
         matched = ""
         try:
             matched += match.group(4)[int(match.group(1)) - 1]
